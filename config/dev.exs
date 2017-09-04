@@ -41,6 +41,6 @@ config :ifsc, Ifsc.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: System.get_env("POSTGRES_DATABASE_USERNAME") || "postgres",
   password: System.get_env("POSTGRES_DATABASE_PASSWORD") || "postgres",
-  database: System.get_env("POSTGRES_DATABASE_NAME") || "echoer_dev",
+  database: System.get_env("POSTGRES_DATABASE_NAME") || "ifsc_dev",
   hostname: System.get_env("POSTGRES_DATABASE_HOST") || "postgres",
   pool_size: 10
