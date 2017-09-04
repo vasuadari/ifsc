@@ -12,7 +12,6 @@ defmodule Ifsc.CSVParser do
   end
 
   def parse_file(file_path) do
-    IO.puts file_path
     [ header_row | rows ] =
     File.stream!(file_path)
     |> CSV.decode
