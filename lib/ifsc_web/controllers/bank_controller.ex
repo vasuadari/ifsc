@@ -8,11 +8,11 @@ defmodule IfscWeb.BankController do
       %Bank{ifsc: ^ifsc} = bank ->
         conn
         |> put_status(200)
-        |> json(%{bank: bank, status: "OK"})
-      {:error, _} ->
+        |> render("index.json", %{bank: bank})
+      nil ->
         conn
-        |> put_status(500)
-        |> json(%{bank: 0, status: "Error occurred"})
+        |> put_status(404)
+        |> json(%{status: "Not found"})
     end
   end
 end
